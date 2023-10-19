@@ -1,0 +1,105 @@
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333; 
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.botoes {
+    text-align: center;
+    margin-top: 20px; }
+
+.botoes button {
+    background-color: #007BFF; 
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px; 
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.aviso {
+    color: red;
+    text-align: center;
+    margin-top: 10px; 
+    font-weight: bold;
+}
+.não {
+    color: crimson;
+    margin-top: 30px ;
+    font-weight: bold;
+}body {
+    background-image: url('lego-background.jpg'); 
+    background-repeat: repeat; 
+    background-size: auto; 
+    color: white; 
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0; 
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h1, h2 ,p {
+    color: #007BFF;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px;
+}

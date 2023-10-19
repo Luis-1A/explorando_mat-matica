@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Agronomia</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background-color: #f0f0f0;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+
+header {
+
+background-color: #4CAF50; 
+color: #fff;
+
+padding: 20px;
+
+text-align: center;
+
+}
+
+
+h1 {
+
+font-size: 36px;
+
+}
+
+
+h4 {
+
+font-size: 36px;
+
+}
+
+
+.container {
+
+max-width: 800px;
+
+margin: 20px auto;
+
+padding: 20px;
+
+background-color: #fff;
+
+border-radius: 5px;
+
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+p {
+
+font-size: 18px;
+
+line-height: 1.6;
+
+}
+
+
+.agronomia-header {
+
+background-color: #4CAF50; 
+
+color: #fff;
+
+padding: 20px;
+
+text-align: center;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="agronomia-header">
+
+<h1>Agronomia</h1>
+
+</header>
+
+
+<div class="container">
+
+<p>
+    <h3>
+    A robótica na agronomia refere-se à aplicação de sistemas autônomos e tecnologias avançadas no campo da agricultura para melhorar a eficiência, produtividade e sustentabilidade das práticas agrícolas. Aqui estão algumas maneiras como a robótica está sendo utilizada na agronomia: <br>
+
+    Agricultura de Precisão: A robótica desempenha um papel crucial na agricultura de precisão, que envolve o uso de tecnologias avançadas para otimizar o manejo de culturas. Robôs e drones equipados com sensores podem coletar dados em tempo real sobre o solo, clima e plantas, permitindo aos agricultores tomar decisões mais informadas sobre o plantio, irrigação, fertilização e colheita.
+    <br>
+    Plantio e Colheita Autônomos: Robôs agrícolas são projetados para plantar sementes e colher culturas de forma autônoma. Isso reduz a dependência de mão de obra humana, especialmente em áreas onde a disponibilidade de trabalhadores agrícolas é limitada.
+    <br>
+    Manejo de Culturas: Robôs podem ser programados para realizar tarefas específicas de manejo de culturas, como desbaste, poda, capina e pulverização de defensivos. Essas operações são realizadas com alta precisão, o que reduz a necessidade de produtos químicos e minimiza danos às plantas.
+    <br>
+    Monitoramento de Pragas e Doenças: Robôs e drones equipados com câmeras e sensores podem monitorar as plantações em busca de sinais de pragas e doenças. Isso permite uma intervenção rápida e direcionada, minimizando os danos às colheitas.
+    <br>
+    Sistemas de Irrigação Inteligente: A robótica é usada para automatizar sistemas de irrigação, otimizando o uso da água e garantindo que as plantas recebam a quantidade certa de umidade.
+    <br>
+    Weeding Robots (Robôs Deservagem): Esses robôs são projetados para identificar e remover ervas daninhas de forma autônoma. Eles utilizam visão computacional e aprendizado de máquina para distinguir entre plantas cultivadas e invasoras.
+    <br>
+    Robôs em Estufas e Ambientes Controlados: Em ambientes como estufas, onde as condições podem ser controladas com precisão, robôs podem ser empregados para tarefas como plantio, colheita e transporte de culturas.
+    <br>
+    Gestão de Rebanhos: A robótica também está sendo aplicada na gestão de rebanhos, incluindo ordenha automatizada, monitoramento de saúde e alimentação.
+    <br>
+    Rastreamento de Inventário e Logística: Robôs são utilizados para rastrear e gerenciar o inventário de produtos agrícolas em armazéns e instalações de processamento.
+    <br>
+    Desenvolvimento de Máquinas Agrícolas Avançadas: A robótica tem impulsionado a criação de máquinas agrícolas mais avançadas, como tratores autônomos e implementos agrícolas inteligentes.
+    <br>
+    A integração da robótica na agronomia está transformando a agricultura de maneiras inovadoras. Isso não apenas aumenta a eficiência e a produtividade, mas também contribui para práticas agrícolas mais sustentáveis, reduzindo o desperdício de recursos e minimizando os impactos ambientais.
+    </h3>
+
+</p>
+
+
+<div id="imagemContainer"> <br>
+
+<img src="imagem" alt="Imagem 1" id="imagem1" class="arrastavel">
+
+<img src="imagem.jpg" alt="Imagem 2" id="imagem2" class="arrastavel">
+
+<img src="imagem.jpg" alt="Imagem 10" id="imagem10" class="arrastavel">
+
+<img src="imagem.jpg" alt="Imagem 1" id="imagem1" class="arrastavel">
+
+<img src="imagem.jpg" alt="Imagem 2" id="imagem2" class="arrastavel">
+
+<img src="imagem.jpg" alt="imagem 0"id="imagem0" class="arrastavel">
+
+<img src="imagem.jpg" alt="Imagem 10" id="imagem10" class="arrastavel">
+
+
+
+<button id="pausarCarrossel" onclick="pausarOuRetomarCarrossel()">Pausar fotos</button>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+let carrosselPausado = false;
+
+
+function pausarOuRetomarCarrossel() {
+
+const botaoPausar = document.getElementById('pausarCarrossel');
+
+
+if (carrosselPausado) {
+
+carrosselPausado = false;
+
+botaoPausar.textContent = 'Pausar fotos';
+
+mostrarImagens();
+
+} else {
+
+carrosselPausado = true;
+
+botaoPausar.textContent = 'Retomar foto';
+
+}
+
+}
+
+
+function ativarTelaCheia() {
+
+const elemento = document.documentElement;
+
+
+if (elemento.requestFullscreen) {
+
+elemento.requestFullscreen();
+
+} else if (elemento.mozRequestFullScreen) {
+
+elemento.mozRequestFullScreen();
+
+} else if (elemento.webkitRequestFullscreen) {
+
+elemento.webkitRequestFullscreen();
+
+} else if (elemento.msRequestFullscreen) {
+
+elemento.msRequestFullscreen();
+
+}
+
+}
+
+
+let slideIndex = 0;
+
+
+function mostrarImagens() {
+
+const imagens = document.getElementsByClassName("arrastavel");
+
+for (let i = 0; i < imagens.length; i++) {
+
+imagens[i].style.display = "none";
+
+}
+
+slideIndex++;
+
+if (slideIndex > imagens.length) {
+
+slideIndex = 1;
+
+}
+
+imagens[slideIndex - 1].style.display = "block";
+
+if (!carrosselPausado) {
+
+setTimeout(mostrarImagens, 2000);
+
+}
+
+}
+
+
+mostrarImagens();
+
+
+</script>
+
+
+</body>
+
+
+</html>

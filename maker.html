@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Maker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFD700; 
+            color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .arrastavel {
+            width: auto;
+            height: auto;
+            margin: 5px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        #imagemContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+      
+        .maker-header {
+            background-color: #FFD700;
+            color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        #pausarCarrossel {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+        #telaCheia {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="maker-header">
+        <h1>Mundo Maker</h1>
+        
+    </header>
+    <div class="container">
+        <h2> 
+            <p>A robótica e a cultura Maker têm uma relação intrínseca, pois ambas promovem a criação, inovação e o aprendizado prático. Juntas, elas impulsionam a criatividade e a exploração em áreas como ciência, tecnologia, engenharia e matemática (STEM), e contribuem para o desenvolvimento de habilidades valiosas. Vamos explorar como esses dois conceitos se interconectam:
+<br> <br>
+                Robótica:
+                
+                Aprendizado Prático: A robótica envolve a construção e programação de robôs, proporcionando uma experiência de aprendizado prática e tangível.
+                
+                Fusão de Disciplinas: A robótica combina conhecimentos de diversas áreas, como eletrônica, mecânica, programação e automação, demonstrando como diferentes disciplinas podem ser integradas para criar soluções funcionais.
+                
+                Inovação Tecnológica: A criação de robôs muitas vezes exige a aplicação de tecnologias avançadas, o que incentiva a inovação e a exploração de novos conceitos e métodos.
+                
+                Solução de Problemas Complexos: A construção e programação de robôs frequentemente envolvem a resolução de problemas complexos, estimulando o pensamento crítico e analítico.
+                
+                Cultura Maker:
+                <br> <br>
+                
+                Abordagem DIY (Faça Você Mesmo): A cultura Maker promove a mentalidade de "faça você mesmo", encorajando as pessoas a criar, modificar e reparar objetos e dispositivos por conta própria.
+                
+                Criatividade e Inovação: Os Makers são conhecidos por sua criatividade e habilidade de inovar, muitas vezes utilizando materiais e recursos disponíveis para criar soluções únicas.
+                
+                Compartilhamento de Conhecimento: A cultura Maker valoriza o compartilhamento de conhecimento e a colaboração, criando uma comunidade de aprendizado colaborativo.
+                
+                Experimentação e Prototipagem Rápida: Os Makers são adeptos da experimentação, construindo protótipos e refinando suas criações de forma iterativa.
+                
+                Integração entre Robótica e Cultura Maker:
+                <br><br>
+                
+                Projetos de Robótica DIY: A cultura Maker frequentemente se aplica à robótica, com entusiastas criando robôs a partir de componentes disponíveis ou reciclados.
+                
+                Hackathons e Competições de Robótica: Eventos como hackathons e competições de robótica incentivam a aplicação da cultura Maker na criação de soluções inovadoras.
+                
+                Plataformas e Kits de Desenvolvimento: Muitas empresas e organizações oferecem kits de robótica e plataformas que permitem aos Makers criar seus próprios robôs a partir de componentes modulares.
+                
+                Compartilhamento de Projetos: Comunidades Maker online são ótimos espaços para compartilhar projetos de robótica, ideias e soluções, promovendo a aprendizagem colaborativa.
+                
+                Educação e Workshops: A integração da robótica na cultura Maker é frequentemente facilitada por meio de workshops e atividades educacionais que incentivam a exploração e a criação.
+                
+                A junção da robótica com a cultura Maker cria um ambiente fértil para a inovação, aprendizado prático e criatividade. Isso não apenas impulsiona a tecnologia, mas também promove uma abordagem mais hands-on para a educação e o desenvolvimento de habilidades valiosas para o mundo atual.</p>
+        </h2>
+        
+        
+        <h2>imagem</h2>
+        <div id="imagemContainer">
+            <img src="projeto1.jpg" alt="Projeto 1" id="projeto1" class="arrastavel">
+            <img src="projeto2.jpg" alt="Projeto 2" id="projeto2" class="arrastavel">
+           
+            <img src="projeto10.jpg" alt="Projeto 10" id="projeto10" class="arrastavel">
+        </div>
+        
+        <button id="pausarCarrossel" onclick="pausarOuRetomarCarrossel()">Pausar Carrossel</button>
+        
+    </div>
+    <div id="modalImagem">
+        <img src="" alt="Imagem Ampliada" id="imagemAmpliada">
+    </div>
+    <script>
+        let carrosselPausado = false;
+
+        function pausarOuRetomarCarrossel() {
+            const botaoPausar = document.getElementById('pausarCarrossel');
+
+            if (carrosselPausado) {
+                carrosselPausado = false;
+                botaoPausar.textContent = 'Pausar Carrossel';
+                mostrarImagens();
+            } else {
+                carrosselPausado = true;
+                botaoPausar.textContent = 'Retomar Carrossel';
+            }
+        }
+
+        function ativarTelaCheia() {
+            const elemento = document.documentElement;
+
+            if (elemento.requestFullscreen) {
+                elemento.requestFullscreen();
+            } else if (elemento.mozRequestFullScreen) {
+                elemento.mozRequestFullScreen();
+            } else if (elemento.webkitRequestFullscreen) {
+                elemento.webkitRequestFullscreen();
+            } else if (elemento.msRequestFullscreen) {
+                elemento.msRequestFullscreen();
+            }
+        }
+
+        let slideIndex = 0;
+
+        function mostrarImagens() {
+            const imagens = document.getElementsByClassName("arrastavel");
+            for (let i = 0; i < imagens.length; i++) {
+                imagens[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > imagens.length) {
+                slideIndex = 1;
+            }
+            imagens[slideIndex - 1].style.display = "block";
+            if (!carrosselPausado) {
+                setTimeout(mostrarImagens, 2000);
+            }
+        }
+
+        mostrarImagens();
+    </script>
+</body>
+</html>
