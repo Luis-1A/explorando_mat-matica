@@ -85,65 +85,122 @@
     <div class="container">
         <h1>  A robótica e a cultura Maker têm uma relação intrínseca, pois ambas promovem a criação, inovação e o aprendizado prático. Juntas, elas impulsionam a criatividade e a exploração em áreas como ciência, tecnologia, engenharia e matemática (STEM), e contribuem para o desenvolvimento de habilidades valiosas. A robótica envolve a construção e programação de robôs, proporcionando uma experiência de aprendizado prática e tangível. Além disso, a robótica combina conhecimentos de diversas áreas, como eletrônica, mecânica, programação e automação, demonstrando como diferentes disciplinas podem ser integradas para criar soluções funcionais. Já a cultura Maker promove a mentalidade de "faça você mesmo", encorajando as pessoas a criar, modificar e reparar objetos e dispositivos por conta própria. Os Makers são conhecidos por sua criatividade e habilidade de inovar, muitas vezes utilizando materiais e recursos disponíveis para criar soluções únicas. A integração da robótica na cultura Maker é frequentemente facilitada por meio de workshops e atividades educacionais que incentivam a exploração e a criação. A junção da robótica com a cultura Maker cria um ambiente fértil para a inovação, aprendizado prático e criatividade, promovendo uma abordagem mais hands-on para a educação e o desenvolvimento de habilidades valiosas para o mundo atual.  </h1>
         
-        < div  id =" imageContainer " >
-            < img  src =" maker.jpg " alt =" Projeto 1 " id =" projeto1 " class =" arrastavel " >
-            < img  src =" maker2.jpg " alt =" Projeto 2 " id =" projeto2 " class =" arrastavel " >
+            
+<div id="imagemContainer"> <br>
 
-            < img  src =" maker3.jpg " alt =" Projeto 10 " id =" projeto10 " class =" arrastavel " >
+<img src="imagem" alt="Imagem 1" id="imagem1" class="arrastavel">
 
-            < img  src =" maker4.jpg " alt =" Projeto 2 " id =" projeto2 " class =" arrastavel " >
-        <button id="pausarCarrossel" onclick="pausarOuRetomarCarrossel()">Pausar Carrossel</button>
-        
-    </div>
-    
-    <script>
-        let carrosselPausado = false;
+<img src="imagem.jpg" alt="Imagem 2" id="imagem2" class="arrastavel">
 
-        function pausarOuRetomarCarrossel() {
-            const botaoPausar = document.getElementById('pausarCarrossel');
+<img src="imagem.jpg" alt="Imagem 10" id="imagem10" class="arrastavel">
 
-            if (carrosselPausado) {
-                carrosselPausado = false;
-                botaoPausar.textContent = 'Pausar Carrossel';
-                mostrarImagens();
-            } else {
-                carrosselPausado = true;
-                botaoPausar.textContent = 'Retomar Carrossel';
-            }
-        }
+<img src="imagem.jpg" alt="Imagem 1" id="imagem1" class="arrastavel">
 
-        function ativarTelaCheia() {
-            const elemento = document.documentElement;
+<img src="imagem.jpg" alt="Imagem 2" id="imagem2" class="arrastavel">
 
-            if (elemento.requestFullscreen) {
-                elemento.requestFullscreen();
-            } else if (elemento.mozRequestFullScreen) {
-                elemento.mozRequestFullScreen();
-            } else if (elemento.webkitRequestFullscreen) {
-                elemento.webkitRequestFullscreen();
-            } else if (elemento.msRequestFullscreen) {
-                elemento.msRequestFullscreen();
-            }
-        }
+<img src="imagem.jpg" alt="imagem 0"id="imagem0" class="arrastavel">
 
-        let slideIndex = 0;
+<img src="imagem.jpg" alt="Imagem 10" id="imagem10" class="arrastavel">
 
-        function mostrarImagens() {
-            const imagens = document.getElementsByClassName("arrastavel");
-            for (let i = 0; i < imagens.length; i++) {
-                imagens[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > imagens.length) {
-                slideIndex = 1;
-            }
-            imagens[slideIndex - 1].style.display = "block";
-            if (!carrosselPausado) {
-                setTimeout(mostrarImagens, 2000);
-            }
-        }
 
-        mostrarImagens();
+
+<button id="pausarCarrossel" onclick="pausarOuRetomarCarrossel()">Pausar fotos</button>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+let carrosselPausado = false;
+
+
+function pausarOuRetomarCarrossel() {
+
+const botaoPausar = document.getElementById('pausarCarrossel');
+
+
+if (carrosselPausado) {
+
+carrosselPausado = false;
+
+botaoPausar.textContent = 'Pausar fotos';
+
+mostrarImagens();
+
+} else {
+
+carrosselPausado = true;
+
+botaoPausar.textContent = 'Retomar foto';
+
+}
+
+}
+
+
+function ativarTelaCheia() {
+
+const elemento = document.documentElement;
+
+
+if (elemento.requestFullscreen) {
+
+elemento.requestFullscreen();
+
+} else if (elemento.mozRequestFullScreen) {
+
+elemento.mozRequestFullScreen();
+
+} else if (elemento.webkitRequestFullscreen) {
+
+elemento.webkitRequestFullscreen();
+
+} else if (elemento.msRequestFullscreen) {
+
+elemento.msRequestFullscreen();
+
+}
+
+}
+
+
+let slideIndex = 0;
+
+
+function mostrarImagens() {
+
+const imagens = document.getElementsByClassName("arrastavel");
+
+for (let i = 0; i < imagens.length; i++) {
+
+imagens[i].style.display = "none";
+
+}
+
+slideIndex++;
+
+if (slideIndex > imagens.length) {
+
+slideIndex = 1;
+
+}
+
+imagens[slideIndex - 1].style.display = "block";
+
+if (!carrosselPausado) {
+
+setTimeout(mostrarImagens, 2000);
+
+}
+
+}
+
+
+mostrarImagens()
     </script>
 </body>
 </html>
