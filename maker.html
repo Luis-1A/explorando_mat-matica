@@ -120,100 +120,57 @@
 
 <button id="pausarCarrossel" onclick="pausarOuRetomarCarrossel()">Pausar fotos</button>
 
-</div>
+        </div>
 
-</div>
+        <script>
+            let carrosselPausado = false;
 
+            function pausarOuRetomarCarrossel() {
+                const botaoPausar = document.getElementById('pausarCarrossel');
 
+                if (carrosselPausado) {
+                    carrosselPausado = false;
+                    botaoPausar.textContent = 'Pausar fotos';
+                    mostrarImagens();
+                } else {
+                    carrosselPausado = true;
+                    botaoPausar.textContent = 'Retomar foto';
+                }
+            }
 
-<script>
+            function ativarTelaCheia() {
+                const elemento = document.documentElement;
 
-let carrosselPausado = false;
+                if (elemento.requestFullscreen) {
+                    elemento.requestFullscreen();
+                } else if (elemento.mozRequestFullScreen) {
+                    elemento.mozRequestFullScreen();
+                } else if (elemento.webkitRequestFullscreen) {
+                    elemento.webkitRequestFullscreen();
+                } else if (elemento.msRequestFullscreen) {
+                    elemento.msRequestFullscreen();
+                }
+            }
 
+            let slideIndex = 0;
 
-function pausarOuRetomarCarrossel() {
+            function mostrarImagens() {
+                const imagens = document.getElementsByClassName("arrastavel");
+                for (let i = 0; i < imagens.length; i++) {
+                    imagens[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > imagens.length) {
+                    slideIndex = 1;
+                }
+                imagens[slideIndex - 1].style.display = "block";
+                if (!carrosselPausado) {
+                    setTimeout(mostrarImagens, 2000);
+                }
+            }
 
-const botaoPausar = document.getElementById('pausarCarrossel');
-
-
-if (carrosselPausado) {
-
-carrosselPausado = false;
-
-botaoPausar.textContent = 'Pausar fotos';
-
-mostrarImagens();
-
-} else {
-
-carrosselPausado = true;
-
-botaoPausar.textContent = 'Retomar foto';
-
-}
-
-}
-
-
-function ativarTelaCheia() {
-
-const elemento = document.documentElement;
-
-
-if (elemento.requestFullscreen) {
-
-elemento.requestFullscreen();
-
-} else if (elemento.mozRequestFullScreen) {
-
-elemento.mozRequestFullScreen();
-
-} else if (elemento.webkitRequestFullscreen) {
-
-elemento.webkitRequestFullscreen();
-
-} else if (elemento.msRequestFullscreen) {
-
-elemento.msRequestFullscreen();
-
-}
-
-}
-
-
-let slideIndex = 0;
-
-
-function mostrarImagens() {
-
-const imagens = document.getElementsByClassName("arrastavel");
-
-for (let i = 0; i < imagens.length; i++) {
-
-imagens[i].style.display = "none";
-
-}
-
-slideIndex++;
-
-if (slideIndex > imagens.length) {
-
-slideIndex = 1;
-
-}
-
-imagens[slideIndex - 1].style.display = "block";
-
-if (!carrosselPausado) {
-
-setTimeout(mostrarImagens, 2000);
-
-}
-
-}
-
-
-mostrarImagens()
+            mostrarImagens();
+                     
     </script>
 </body>
 </html>
