@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Maker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFD700; 
+            color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .arrastavel {
+            width: auto;
+            height: auto;
+            margin: 5px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        #imagemContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+      
+        .maker-header {
+            background-color: #FFD700;
+            color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        #pausarCarrossel {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+        #telaCheia {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="maker-header">
+        <h1>apresentação dos projetos</h1>
+        <a href="index.html"><button>menu</button></a>
+            <a href="lego.html"><button>Indústria </button></a>
+            <a href="lowcode.html"><button>Jogos</button></a>
+            
+           
+    </header>
+    <div class="container">
+        <h1>  <p>
+            
+            
+<div id="imagemContainer"> <br>
 
+<img src="fotos" alt="imagem" id="imagem1" class="arrastavel">
+
+<img src="foto.jpg" alt="imagem" id="imagem2" class="arrastavel">
+
+<img src="foto.jpg" alt="imagem" id="imagem10" class="arrastavel">
+
+<img src="foto.jpg" alt="imagem" id="imagem1" class="arrastavel">
+
+<br>
+</div>
+        
+<button id="pausarCarrossel" onclick="pausarOuRetomarCarrossel()">Pausar fotos</button>
+
+        </div>
+
+        <script>
+            let carrosselPausado = false;
+
+            function pausarOuRetomarCarrossel() {
+                const botaoPausar = document.getElementById('pausarCarrossel');
+
+                if (carrosselPausado) {
+                    carrosselPausado = false;
+                    botaoPausar.textContent = 'Pausar fotos';
+                    mostrarImagens();
+                } else {
+                    carrosselPausado = true;
+                    botaoPausar.textContent = 'Retomar foto';
+                }
+            }
+
+            function ativarTelaCheia() {
+                const elemento = document.documentElement;
+
+                if (elemento.requestFullscreen) {
+                    elemento.requestFullscreen();
+                } else if (elemento.mozRequestFullScreen) {
+                    elemento.mozRequestFullScreen();
+                } else if (elemento.webkitRequestFullscreen) {
+                    elemento.webkitRequestFullscreen();
+                } else if (elemento.msRequestFullscreen) {
+                    elemento.msRequestFullscreen();
+                }
+            }
+
+            let slideIndex = 0;
+
+            function mostrarImagens() {
+                const imagens = document.getElementsByClassName("arrastavel");
+                for (let i = 0; i < imagens.length; i++) {
+                    imagens[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > imagens.length) {
+                    slideIndex = 1;
+                }
+                imagens[slideIndex - 1].style.display = "block";
+                if (!carrosselPausado) {
+                    setTimeout(mostrarImagens, 2000);
+                }
+            }
+
+            mostrarImagens();
+                     
+    </script>
+</body>
+</html>
