@@ -115,11 +115,31 @@
         
 <button id="pausarCarrossel" onclick="pausarOuRetomarCarrossel()">Pausar fotos</button>
 
-    <video width="640" height="480" controls>
-  <source src="caminho/do/arquivo/caminho/do/arquivo/Video4.mp4"
-      type="video/mp4">
+    <video id="meu-video" width="640" height="480" controls>
+  <source src="caminho/do/arquivo/vídeor.mp4" type="video/mp4">
   Seu navegador não suporta o elemento de vídeo.
-    </video>
+</video>
+
+<script>
+  var video = document.getElementById("meu-video");
+  var sources = [
+    "caminho/do/arquivo/vídeo5.mp4",
+    "caminho/do/arquivo/vídeo2.mp4",
+    "caminho/do/arquivo/vídeo3.mp4",
+    "caminho/do/arquivo/vídeo4.mp4"
+  ];
+  var index = 0;
+
+  video.addEventListener("ended", function() {
+    index++;
+    if (index >= sources.length) {
+      index = 0;
+    }
+    video.src = sources[index];
+    video.load();
+    video.play();
+  });
+</script>
   
         <script>
             let carrosselPausado = false;
@@ -171,27 +191,6 @@
             mostrarImagens();
                      
     </script>
-            <script>
-  var video = document.getElementById("meu-video");
-  var sources = [
-    "caminho/do/arquivo/caminho/do/arquivo/Vídeo4.mp4",
-    "caminho/do/arquivo/caminho/do/arquivo/Vídeo2.mp4",
-    "caminho/do/arquivo/caminho/do/arquivo/Vídeo3.mp4",
-    "caminho/do/arquivo/caminho/do/arquivo/Vídeo5.mp4"
-  ];
-  var index = 0;
-
-  video.addEventListener("ended", function() {
-    setTimeout(function() {
-      index++;
-      if (index >= sources.length) {
-        index = 0;
-      }
-      video.src = sources[index];
-      video.load();
-      video.play();
-    }, 5000);
-  });
-            </script>
+            
 </body>
 </html>
