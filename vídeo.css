@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #333;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
@@ -47,7 +47,7 @@ p {
 }
 
 .maker-header {
-    background-color: #fff;
+    background-color: #FFD700;
     color: #000;
     padding: 20px;
     text-align: center;
@@ -67,9 +67,8 @@ p {
 #telaCheia {
     display: block;
     margin-top: 10px;
-    padding: 10px 20px;            
-    background-color: #FFD700;
-
+    padding: 10px 20px;
+    background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
