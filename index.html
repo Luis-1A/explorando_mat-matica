@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .menu-button {
+            background-color: #405DE6;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 998;
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        .menu-item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    </style>
+    <title>explorando matemática com auxílio da robótica</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo <br> explorando matemática com auxílio da robótica</h1>
+        <img src="Júlio.jpg" alt="robótica em ação">
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+            <a href="lego.html" class="menu-item">Indústria</a>
+            <a href="lowcode.html" class="menu-item">Jogos</a>
+            <a href="maker.html" class="menu-item">Maker</a>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</
