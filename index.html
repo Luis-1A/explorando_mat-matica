@@ -4,64 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        explorando matemática com auxílio da robotica</title>
     <style>
-        .menu-button {
+        .botao-instagram {
             background-color: #405DE6;
             color: white;
             border: none;
-            padding: 15px;
-            font-size: 20px;
-            border-radius: 50%;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
             cursor: pointer;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 999;
-        }
-
-        .menu {
-            display: none;
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 998;
-        }
-
-        .menu.active {
-            display: block;
-        }
-
-        .menu-item {
-            display: inline-block;
-            margin: 0 10px;
         }
     </style>
-           <link rel="stylesheet" href="style.css">
 
-   <title>explorando matemática com auxílio da robótica</title>
 </head>
 
 <body>
     <header>
         <h1>Bem-vindo <br> explorando matemática com auxílio da robótica</h1>
-        <img src="Júlio.jpg" alt="robótica em ação">
-        <div class="menu-button" onclick="toggleMenu()">☰</div>
-        <div class="menu" id="menu">
-            <a href="lego.html" class="menu-item">Indústria</a>
-            <a href="lowcode.html" class="menu-item">Jogos</a>
-            <a href="maker.html" class="menu-item">Maker</a>
-        </div>
-    </header>
+        <br>
+        <br>
 
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('active');
-        }
-    </script>
+        <br> <img src="Júlio.jpg" alt="robótica em ação">
+
+        <br>
+        <br>
+        <div class="botoes">
+
+            <a href="lego.html"><button>Indústria </button></a>
+            <a href="lowcode.html"><button>Jogos</button></a>
+            <a href="maker.html"><button>Maker</button></a>
+            <br>
+            <br>
+            <a href="vídeo.html"><button>Dia das apresentação</button></a>
+
+            </p>
+            <br>
+
+        </div>
+
+        <footer>
+            <h4>Website Developed By <button class="botao-instagram"
+                    onclick="window.location.href = 'https://www.instagram.com/julioborges.12/?igshid=OGQ5ZDc2ODk2ZA%3D%3D';">Júlio
+                    Cesar</button>
+
+        </footer>
+
 </body>
 
 </html>
