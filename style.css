@@ -9,9 +9,12 @@ body, h3 {
 }
 
 body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#1e90ff, #0077cc); 
+    background-image: radial-gradient(circle at top right, #ffd700, transparent); 
 }
 
 header {
