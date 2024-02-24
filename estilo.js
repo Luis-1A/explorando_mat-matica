@@ -8,3 +8,5 @@ function toggleButtons() {
 	buttonsComponent.classList.toggle('buttons--active');
 	document.activeElement.blur();
 }
+
+
