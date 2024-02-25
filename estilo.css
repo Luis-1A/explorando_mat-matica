@@ -76,7 +76,7 @@ body::before {
 .allbtns {
   left: 50%;
   position: fixed;
-  bottom: 0%; /* Ajustado para levantar um pouco da parte inferior */
+  bottom: 0%; 
   transform: translate(-50%, 0) rotate(180deg);
   transform-origin: center;
   transition: transform 0.75s ease;
@@ -99,7 +99,7 @@ body::before {
   width: 8rem;
   left: 100%;
   position: fixed;
-  bottom: 2%; /* Ajustado para levantar um pouco da parte inferior */
+  bottom: 2%; 
   transform: translate(-50%, 0) rotate(180deg);
   transform-origin: center;
   transition: transform 0.2s ease;
@@ -166,15 +166,15 @@ body::before {
 }
 .bem-vindo {
   text-align: center;
-  color: blue; /* Cor azul para o texto "Seja bem-vindo" */
-  margin-top: -130px; /* Distância do topo da tela */
+  color: blue; 
+  margin-top: -130px; 
 }
 
 .bem-vindo h1 {
-  margin-bottom: 10px; /* Espaçamento abaixo do "Seja bem-vindo" */
+  margin-bottom: 10px;
 }
 
 .bem-vindo img {
-  max-width: 80%; /* Tamanho máximo da imagem */
-  margin-top: 10px; /* Espaçamento acima da imagem */
+  max-width: 80%; 
+  margin-top: 10px; 
 }
