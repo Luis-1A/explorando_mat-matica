@@ -1,3 +1,4 @@
 setTimeout(function(){
     window.location.href = 'lego.html';
-  }, 15000);
+  }, 7000);
+//não esqueça de falar com
