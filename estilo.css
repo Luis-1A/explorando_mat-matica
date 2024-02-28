@@ -167,7 +167,7 @@ body::before {
 .bem-vindo {
   text-align: center;
   color: blue;
-  margin-top: 10px; /* Alterado para manter os elementos no topo */
+  margin-top: 90px; /* Alterado para manter os elementos no topo */
 }
 
 .bem-vindo h1 {
