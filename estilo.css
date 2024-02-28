@@ -166,8 +166,8 @@ body::before {
 }
 .bem-vindo {
   text-align: center;
-  color: blue; 
-  margin-top: -130px; 
+  color: blue;
+  margin-top: 10px; /* Alterado para manter os elementos no topo */
 }
 
 .bem-vindo h1 {
@@ -175,6 +175,6 @@ body::before {
 }
 
 .bem-vindo img {
-  max-width: 80%; 
-  margin-top: 10px; 
+  max-width: 80%;
+  margin-top: 10px;
 }
