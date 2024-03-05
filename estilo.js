@@ -12,11 +12,11 @@ function toggleButtons() {
     const currentPosition = allButton.getAttribute('data-position');
 
     if (currentPosition === 'original' || !currentPosition) {
-        moveAllButton('90%', '53%');
+        moveAllButton('90%', '50%');
         allButton.setAttribute('data-position', 'moved');
     } else {
         setTimeout(function () {
-            moveAllButton('80%', '48%');
+            moveAllButton('80%', '40%');
             allButton.setAttribute('data-position', 'original');
 
             setTimeout(function () {
