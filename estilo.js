@@ -1,33 +1,44 @@
 const buttonsComponent = document.querySelector('.buttons');
 const buttonsToggle = document.querySelector('.buttons__toggle');
+const allButton = document.querySelector('.allbtns');
 
 buttonsToggle.addEventListener('click', toggleButtons);
 
 function toggleButtons() {
-	buttonsToggle.classList.toggle('buttons__toggle--active');
-	buttonsComponent.classList.toggle('buttons--active');
-	document.activeElement.blur();
+    buttonsToggle.classList.toggle('buttons__toggle--active');
+    buttonsComponent.classList.toggle('buttons--active');
+    document.activeElement.blur();
+
+    const currentPosition = allButton.getAttribute('data-position');
+
+    if (currentPosition === 'original' || !currentPosition) {
+        moveAllButton('90%', '53%');
+        allButton.setAttribute('data-position', 'moved');
+    } else {
+        setTimeout(function () {
+            moveAllButton('80%', '48%');
+            allButton.setAttribute('data-position', 'original');
+
+            setTimeout(function () {
+                allButton.style.zIndex = '-1';
+                allButton.style.opacity = '0';
+            }, 500);
+        }, 920);
+    }
 }
 
-//tudo daqui pra baixo pode apaga
+function moveAllButton(top, left) {
+    allButton.style.zIndex = '1';
+    allButton.style.opacity = '1';
+    allButton.style.transition = 'top 0.5s, left 0.5s';
+    allButton.style.top = top;
+    allButton.style.left = left;
 
+  
+    buttonsToggle.style.top = '80%';
+    buttonsToggle.style.left = '50%';
 
-const toggleButton = document.querySelector('.buttons__toggle');
-const allButton = document.querySelector('.allbtns');
-let clicked = false;
-
-toggleButton.addEventListener('click', function() {
-    if (!clicked) {
-        allButton.style.display = 'block'; 
-        setTimeout(function() {
-            toggleButton.setAttribute('data-clicked', 'true'); 
-        }, 1000);
-        clicked = true;
-    } else {
-        setTimeout(function() {
-            allButton.style.display = 'none'; 
-            toggleButton.removeAttribute('data-clicked'); 
-            clicked = false;
-        }, 4000);
-    }
-});
+    setTimeout(() => {
+        allButton.style.transition = ''; 
+    }, 500);
+}
