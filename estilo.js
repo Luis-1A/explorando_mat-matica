@@ -16,7 +16,7 @@ function toggleButtons() {
         allButton.setAttribute('data-position', 'moved');
     } else {
         setTimeout(function () {
-            moveAllButton('80%', '48%');
+            moveAllButton('80%', '50%');
             allButton.setAttribute('data-position', 'original');
 
             setTimeout(function () {
