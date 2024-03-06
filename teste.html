@@ -10,22 +10,6 @@
 <body>
     <h1>deu certo </h1>
     <p>blá blá </p>
-    <script>
-        // Função para mostrar a página "Butao.html" por 5 segundos
-        function mostrarPaginaButao() {
-            var butaoPagina = document.createElement('iframe');
-            butaoPagina.src = 'Butao.html';
-            document.body.appendChild(butaoPagina);
-
-            setTimeout(function () {
-                document.body.removeChild(butaoPagina);
-                document.body.style.display = 'block'; // Mostramos o corpo da página após 5 segundos
-            }, 5000);
-        }
-
-        // Chama a função quando a página é totalmente carregada
-        window.onload = mostrarPaginaButao;
-    </script>
 </body>
 
 </html>
