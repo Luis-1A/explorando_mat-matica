@@ -202,3 +202,18 @@ body::before {
     background-color: yellow;
     
 }
+/* apagar depois */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button img {
+    max-width: 100%;
+    vertical-align: middle;
+}
