@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jogos</title>
+    <title>Redirecionamento com Prévia</title>
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .preview {
+            position: absolute;
+            top: 0;
+            left: 110%;
+            display: none;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .container:hover .preview {
+            display: block;
+        }
+
+        button {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 <body>
-    
+
+<div class="container">
+    <button onclick="window.location.href = 'https://www.clickjogos.com.br/jogos-de-fazendas/goodgame-bigfarm-desktop';">Clique aqui para ser redirecionado</button>
+    <div class="preview">
+        
+        <h3>Prévia da Página</h3>
+        <p>Aqui você pode adicionar uma prévia da página para a qual será redirecionado.</p>
+    </div>
+</div>
+
 </body>
 </html>
