@@ -42,3 +42,6 @@ function moveAllButton(top, left) {
         allButton.style.transition = ''; 
     }, 500);
 }
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    window.location = "2.html";
+  }
