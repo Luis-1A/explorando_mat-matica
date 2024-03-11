@@ -93,6 +93,7 @@ body::before {
     transform-origin: center;
     transition: transform 0.2s ease;
 }
+
 .allbtns {
     background-color: 0;
     border-radius: 100px;
@@ -104,7 +105,7 @@ body::before {
     height: 4rem;
     width: 4rem;
     position: fixed;
-    bottom: 50%; 
+    bottom: 50%;
     left: 50%;
     transform: translateX(-50%) rotate(180deg);
     transform-origin: center;
@@ -129,10 +130,28 @@ body::before {
     text-decoration: none;
     width: 8rem;
     position: fixed;
-    bottom: 10%; /* Ajuste conforme necessário para a posição desejada */
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 1;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#minhaAnimacao {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -200,8 +219,9 @@ body::before {
 
 .buttons__toggle[data-clicked="true"] {
     background-color: yellow;
-    
+
 }
+
 /* apagar depois */
 .button img {
     max-width: 100%;
