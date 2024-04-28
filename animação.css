@@ -35,7 +35,7 @@
     left: 0;
     right: 0;
     height: 0;
-    background-color: #add8e6;
+    background-color: #2c4cb4;
     z-index: -1;
     animation: rise 5s infinite alternate;
   }
