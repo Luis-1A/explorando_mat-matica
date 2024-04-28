@@ -39,3 +39,6 @@
     z-index: -1;
     animation: rise 5s infinite alternate;
   }
+  body {
+    background-color: #87CEEB; /* Azul Céu */
+  }
